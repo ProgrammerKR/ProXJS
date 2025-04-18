@@ -1,22 +1,22 @@
-# Alpine.js
+# ProXJS
 
-Go to the Alpine docs for most things: [Alpine Docs](https://alpinejs.dev)
+Visit the ProXJS documentation for most information: [ProXJS Docs](https://proxjs.dev)
 
-You are welcome to submit updates to the docs by submitting a PR to this repo. Docs are located in the [`/packages/docs`](/packages/docs) directory.
+You are welcome to contribute to the docs by submitting a PR. Docs are located in the [`/packages/docs`](/packages/docs) directory.
 
 Stay here for contribution-related information.
 
-> Looking for V2 docs? [here they are](https://github.com/alpinejs/alpine/tree/v2.8.2)
+> Looking for legacy version docs? [Click here](https://github.com/ProgrammerKR/ProXJS/tree/v1.0.0)
 
-<p align="center"><a href="https://alpinejs.dev/patterns"><img src="/hero.jpg" alt="Alpine Component Patterns"></a></p>
+<p align="center"><a href="https://proxjs.dev/patterns"><img src="/hero.jpg" alt="ProXJS Component Patterns"></a></p>
 
 ## Contribution Guide:
 
 ### Quickstart
 
-* clone this repo locally
-* run `npm install` & `npm run build`
-* Include the `/packages/alpinejs/dist/cdn.js` file from a `<script>` tag on a webpage and you're good to go!
+* Clone this repo locally
+* Run `npm install` & `npm run build`
+* Include the `/packages/proxjs/dist/cdn.js` file from a `<script>` tag on a webpage and you're good to go!
 
 ### Brief Tour
 You can get everything installed with: `npm install` in the root directory of this repo after cloning it locally.
@@ -29,30 +29,32 @@ Here's a brief look at each package in this repo:
 
 Package | Description
 --- | ---
-[alpinejs](packages/alpinejs) | The main Alpine repo with all of Alpine's core
+[proxjs](packages/proxjs) | The main ProXJS repo with all of ProXJS's core
 [collapse](packages/collapse) | A plugin for expanding and collapsing elements using smooth animations
-[csp](packages/csp) | A repo to provide a "CSP safe" build of Alpine
-[docs](packages/docs) | The Alpine documentation
+[csp](packages/csp) | A repo to provide a "CSP safe" build of ProXJS
+[docs](packages/docs) | The ProXJS documentation
 [focus](packages/focus) | A plugin that allows you to manage focus inside an element
-[history](packages/history) | A plugin for binding data to query string parameters using the history API (name is likely to change)
+[history](packages/history) | A plugin for binding data to query string parameters using the history API
 [intersect](packages/intersect) | A plugin for triggering JS expressions based on elements intersecting with the viewport
 [mask](packages/mask) | A plugin for automatically formatting a text input field as a user types
 [morph](packages/morph) | A plugin for morphing HTML (like morphdom) inside the page intelligently
-[persist](packages/persist) | A plugin for persisting Alpine state across page loads
+[persist](packages/persist) | A plugin for persisting ProXJS state across page loads
 
-The compiled JS files (as a result of running `npm run [build/watch]`) to be included as a `<script>` tag for example are stored in each package's `packages/[package]/dist` directory.
+The compiled JS files to be included as a `<script>` tag are stored in each package's `packages/[package]/dist` directory.
 
-Each package should at least have: a "cdn" build that is self-initializing and can be included using the `src` attribute in a `<script defer>` tag, and a `module.[esm/cjs].js` file that is used for importing as a JS module (cjs for node, esm for everything else).
+Each package should include:
+- A "cdn" build that is self-initializing and can be included using the `src` attribute in a `<script defer>` tag
+- A `module.[esm/cjs].js` file used for importing as a JS module
 
-The bundling for Alpine V3 is handled exclusively by ESBuild. All of the configuration for these builds is stored in the `scripts/build.js` file.
+The bundling for ProXJS is handled exclusively by ESBuild. All of the configuration for these builds is stored in the `scripts/build.js` file.
 
 ### Testing
-There are 2 different testing tools used in this repo: Cypress (for integration tests), and Jest (for unit tests).
+There are two different testing tools used in this repo: Cypress (for integration tests), and Jest (for unit tests).
 
 All tests are stored inside the `/tests` folder under `/tests/cypress` and `/tests/jest`.
 
 You can run them both from the command line using: `npm run test`
 
-If you wish to only run cypress and open it's user interface (recommended during development), you can run: `npm run cypress`
+To open the Cypress UI (recommended during development), run: `npm run cypress`
 
-If you wish to only run Jest tests, you can run `npm run jest` like normal and target specific tests. You can specify command line config options to forward to the jest command with `--` like so: `npm run jest -- --watch`
+To only run Jest tests, run `npm run jest`. You can specify CLI config options with `--` like: `npm run jest -- --watch`
