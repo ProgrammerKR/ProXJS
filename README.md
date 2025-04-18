@@ -8,8 +8,6 @@ Stay here for contribution-related information.
 
 > Looking for legacy version docs? [Click here](https://github.com/ProgrammerKR/ProXJS/tree/v1.0.0)
 
-<p align="center"><a href="https://proxjs.dev/patterns"><img src="/hero.jpg" alt="ProXJS Component Patterns"></a></p>
-
 ## Contribution Guide:
 
 ### Quickstart
